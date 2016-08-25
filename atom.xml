@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<rss version="2.0">
+
+<channel>
+  <title>Zerone Blog</title>
+  <link>http://www.leonma.cn</link>
+  <description>Welcome to leon`s Blog</description>
+  <item>
+    <title>Blogs</title>
+    <link>http://www.w3schools.com/archives</link>
+    <description>Articals in Leon`s Blog</description>
+  </item>
+</channel>
+
+</rss>
