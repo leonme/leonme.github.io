@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>HTML5大数据可视化效果（二）可交互地铁线路图 | Zerone Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="#HTML5大数据可视化效果（二）可交互地铁线路图
+HTML5大数据可视化效果”系列，以示鼓励（P.S. 其实还挺有压力的，后浪推前浪，新人赶旧人。我们这些老鸟也得注意，免得让00后给抢了饭碗）
+
+
+
+1234567891011121314151617181920212223242526272829twaver.Util.registerImage(&apos;station&apos;,&amp;#123;     	w:">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HTML5大数据可视化效果（二）可交互地铁线路图">
+<meta property="og:url" content="http://www.leonma.cn/2016/11/07/HTML5大数据可视化效果-二-可交互地铁线路图/index.html">
+<meta property="og:site_name" content="Zerone Blog">
+<meta property="og:description" content="#HTML5大数据可视化效果（二）可交互地铁线路图
+HTML5大数据可视化效果”系列，以示鼓励（P.S. 其实还挺有压力的，后浪推前浪，新人赶旧人。我们这些老鸟也得注意，免得让00后给抢了饭碗）
+
+
+
+1234567891011121314151617181920212223242526272829twaver.Util.registerImage(&apos;station&apos;,&amp;#123;     	w:">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121614533-2062155906.jpg">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121656721-376610979.jpg">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121921361-1178958456.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103122154049-1255275872.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103141731096-1466288424.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103141931643-856207231.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103143834486-1796262740.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103143940158-1173344247.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103144715205-1780446914.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103144816315-1456837843.png">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103144955643-1549309486.png">
+<meta property="og:updated_time" content="2016-11-07T14:45:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HTML5大数据可视化效果（二）可交互地铁线路图">
+<meta name="twitter:description" content="#HTML5大数据可视化效果（二）可交互地铁线路图
+HTML5大数据可视化效果”系列，以示鼓励（P.S. 其实还挺有压力的，后浪推前浪，新人赶旧人。我们这些老鸟也得注意，免得让00后给抢了饭碗）
+
+
+
+1234567891011121314151617181920212223242526272829twaver.Util.registerImage(&apos;station&apos;,&amp;#123;     	w:">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121614533-2062155906.jpg">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-HTML5大数据可视化效果-二-可交互地铁线路图" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">HTML5大数据可视化效果（二）可交互地铁线路图</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.07</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Leon Ma</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/HTML5/">HTML5</a>
+  </span>
+
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>#HTML5大数据可视化效果（二）可交互地铁线路图</p>
+<p><a href="http://www.cnblogs.com/twaver/p/4547924.html" target="_blank" rel="external">HTML5大数据可视化效果</a><br>”系列，以示鼓励（P.S. 其实还挺有压力的，后浪推前浪，新人赶旧人。我们这些老鸟也得注意，免得让00后给抢了饭碗）</p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121614533-2062155906.jpg" alt="picture"><br><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121656721-376610979.jpg" alt="picture"></p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103121921361-1178958456.gif" alt="picture"></p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103122154049-1255275872.gif" alt="picture"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line">twaver.Util.registerImage(<span class="string">'station'</span>,&#123;     </div><div class="line">	w: linkWidth*<span class="number">1.6</span>,     </div><div class="line">	h: linkWidth*<span class="number">1.6</span>,     </div><div class="line">	v: <span class="function"><span class="keyword">function</span> (<span class="params">data, view</span>) </span>&#123;         </div><div class="line">		<span class="keyword">var</span> result = [];         </div><div class="line">		<span class="keyword">if</span>(data.getClient(<span class="string">'focus'</span>))&#123;             </div><div class="line">			result.push(&#123;                 </div><div class="line">				shape: <span class="string">'circle'</span>,                 </div><div class="line">				r: linkWidth*<span class="number">0.7</span>,                 </div><div class="line">				lineColor:  data.getClient(<span class="string">'lineColor'</span>),                 </div><div class="line">				lineWidth: linkWidth*<span class="number">0.2</span>,                 </div><div class="line">				fill: <span class="string">'white'</span>,             </div><div class="line">			&#125;);             </div><div class="line">			result.push(&#123;                 </div><div class="line">				shape: <span class="string">'circle'</span>,                 </div><div class="line">				r: linkWidth*<span class="number">0.2</span>,                 </div><div class="line">				fill:  data.getClient(<span class="string">'lineColor'</span>),             </div><div class="line">			&#125;);         </div><div class="line">		&#125;<span class="keyword">else</span>&#123;             </div><div class="line">			result.push(&#123;                 </div><div class="line">				shape: <span class="string">'circle'</span>,                 </div><div class="line">				r: linkWidth*<span class="number">0.6</span>,                 </div><div class="line">				lineColor: data.getClient(<span class="string">'lineColor'</span>),                 </div><div class="line">				lineWidth: linkWidth*<span class="number">0.2</span>,                 </div><div class="line">				fill: <span class="string">'white'</span>,             </div><div class="line">			&#125;);         </div><div class="line">		&#125;         </div><div class="line">	<span class="keyword">return</span> result;     </div><div class="line">&#125; &#125;);</div></pre></td></tr></table></figure>
+<p> 来看代码：</p>
+<p>###1. 代码1<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">twaver.Util.registerImage(<span class="string">'rotateArrow'</span>, &#123; </div><div class="line">w: <span class="number">124</span>, </div><div class="line">h: <span class="number">124</span>, </div><div class="line">v: [&#123; </div><div class="line">    shape: <span class="string">'vector'</span>, </div><div class="line">    name: <span class="string">'doubleArrow'</span>, </div><div class="line">    rotate: <span class="number">360</span>, </div><div class="line">    animate: [&#123; </div><div class="line">        attr: <span class="string">'rotate'</span>, </div><div class="line">          to: <span class="number">0</span>, </div><div class="line">          dur: <span class="number">2000</span>, </div><div class="line">          reverse: <span class="literal">false</span>, </div><div class="line">          repeat: <span class="built_in">Number</span>.POSITIVE_INFINITY </div><div class="line">      &#125;] </div><div class="line">  &#125;] </div><div class="line">&#125;);</div></pre></td></tr></table></figure></p>
+<pre><code>另外，在单击和双击站点时，还实现了selected和loading的动画效果，值得点赞！
+![picture](http://images2015.cnblogs.com/blog/311983/201611/311983-20161103141545565-2010504104.gif)
+![picture](http://images2015.cnblogs.com/blog/311983/201611/311983-20161103141605065-1237423734.gif)
+</code></pre><p>​<br>​<br>       <img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103141731096-1466288424.gif" alt="picture"></p>
+<p>​       </p>
+<p>###2. 代码2<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">network.setZoomManager(<span class="keyword">new</span> twaver.vector.MixedZoomManager(network)); </div><div class="line">network.setMinZoom(<span class="number">0.2</span>); </div><div class="line">network.setMaxZoom(<span class="number">3</span>); </div><div class="line">network.setZoomVisibilityThresholds(&#123; </div><div class="line">    label : <span class="number">0.6</span>, <span class="number">6.</span>    &#125;);</div></pre></td></tr></table></figure></p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103141931643-856207231.gif" alt="picture"></p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103143834486-1796262740.gif" alt="picture"></p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103143940158-1173344247.gif" alt="picture"></p>
+<p>来鉴赏下小弟的成果。</p>
+<p>数据结构，按照站点、线路、杂项三大块来组织，结构清晰，利于遍历、查询等操作。</p>
+<p>###3. 代码3<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">&#123; </div><div class="line">   "stations":&#123; </div><div class="line">       "l01s01":&#123; &#125;, </div><div class="line">       ………… </div><div class="line">   &#125; </div><div class="line">   "lines":&#123; </div><div class="line">       "l01":&#123;……&#125;, </div><div class="line">       ………… </div><div class="line">   &#125; </div><div class="line">     "sundrys":&#123; </div><div class="line">         "railwaystationshanghai":&#123;……&#125;, </div><div class="line">         ………… </div><div class="line">     &#125; </div><div class="line"> &#125;</div></pre></td></tr></table></figure></p>
+<p>###4. 代码4<br><figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">"l01s01":&#123; </div><div class="line">      "id":"l01s01", </div><div class="line">          "name":"莘庄", </div><div class="line">          "loc":&#123;"x":419,"y":1330&#125;, </div><div class="line">          "label":"bottomright.bottomright", </div><div class="line">      &#125;,</div></pre></td></tr></table></figure></p>
+<p>###5. 代码5<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">loadJSON</span>(<span class="params">path,callback</span>)</span>&#123; <span class="number">2.</span>        <span class="keyword">var</span> xhr = <span class="keyword">new</span> XMLHttpRequest(); <span class="number">3.</span>        xhr.onreadystatechange = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; <span class="number">4.</span>            <span class="keyword">if</span> (xhr.readyState === <span class="number">4</span>) &#123; <span class="number">5.</span>                <span class="keyword">if</span> (xhr.status === <span class="number">200</span>) &#123; <span class="number">6.</span>                   dataJson = <span class="built_in">JSON</span>.parse(xhr.responseText); <span class="number">7.</span>                   callback &amp;amp;&amp;amp; callback(); <span class="number">8.</span>               &#125; <span class="number">9.</span>           &#125; <span class="number">10.</span>       &#125;; <span class="number">11.</span>       xhr.open(<span class="string">"GET"</span>, path, <span class="literal">true</span>); <span class="number">12.</span>       xhr.send(); <span class="number">13.</span>    &#125;</div></pre></td></tr></table></figure></p>
+<p>###6. 代码6<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">init</span>(<span class="params"></span>)</span>&#123; </div><div class="line">loadJSON(<span class="string">"shanghaiMetro.json"</span>, <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123; </div><div class="line">        initNetwork(dataJson); </div><div class="line">        initNode(dataJson); </div><div class="line">    &#125;); </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>###7. 代码7<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(staId <span class="keyword">in</span> json.stations)&#123; </div><div class="line"><span class="keyword">var</span> station = json.stations[staId]; </div><div class="line">staNode = <span class="keyword">new</span> twaver.Node(&#123; </div><div class="line">    id: staId, </div><div class="line">    name: station.name, </div><div class="line">    image:<span class="string">'station'</span>, </div><div class="line">&#125;); </div><div class="line">staNode.s(<span class="string">'label.color'</span>,<span class="string">'rgba(99,99,99,1)'</span>); </div><div class="line">staNode.s(<span class="string">'label.font'</span>,<span class="string">'12px 微软雅黑'</span>); </div><div class="line"> staNode.s(<span class="string">'label.position'</span>,station.label); </div><div class="line"> staNode.setClient(<span class="string">'location'</span>,station.loc); </div><div class="line"> box.add(staNode); <span class="number">13.</span>    &#125;</div></pre></td></tr></table></figure></p>
+<p>###8. 代码8<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">for</span>(lineId <span class="keyword">in</span> json.lines) &#123; </div><div class="line">   &amp;hellip;&amp;hellip; </div><div class="line">   <span class="keyword">for</span>(staSn <span class="keyword">in</span> line.stations) &#123;</div><div class="line">       &amp;hellip;&amp;hellip; </div><div class="line">       <span class="keyword">var</span> link = <span class="keyword">new</span> twaver.Link(linkId,prevSta,staNode); </div><div class="line">       link.s(<span class="string">'link.color'</span>, line.color); </div><div class="line">       link.s(<span class="string">'link.width'</span>, linkWidth);</div><div class="line">       link.setToolTip(line.name); </div><div class="line">       box.add(link); </div><div class="line">    &#125; </div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>最后再加入图标，一张原始的地铁图就呈现出来了。<br><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103144715205-1780446914.png" alt="picture"></p>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103144816315-1456837843.png" alt="picture"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createTurnSta = <span class="function"><span class="keyword">function</span>(<span class="params">line, staSn</span>)</span>&#123;     staTurn = <span class="keyword">new</span> twaver.Node(staSn);     staTurn.setImage();     staTurn.setClient(<span class="string">'lineColor'</span>,line.color);     staTurn.setClient(<span class="string">'lines'</span>,[line.id]);     <span class="keyword">var</span> loc = line.stations[staSn];     staTurn.setClient(<span class="string">'location'</span>,loc);     box.add(staTurn);     <span class="keyword">return</span> staTurn; &#125;</div></pre></td></tr></table></figure>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> createFollowSta = <span class="function"><span class="keyword">function</span>(<span class="params">json, line, staNode, staId</span>)</span>&#123;     staFollow = <span class="keyword">new</span> twaver.Follower(staId);     staFollow.setImage();     staFollow.setClient(<span class="string">'lineColor'</span>,line.color);     staFollow.setClient(<span class="string">'lines'</span>,[line.id]);     staFollow.setHost(staNode);     <span class="keyword">var</span> az = azimuth[staId.substr(<span class="number">6</span>,<span class="number">2</span>)];     <span class="keyword">var</span> loc0 = json.stations[staId.substr(<span class="number">0</span>,<span class="number">6</span>)].loc;     <span class="keyword">var</span> loc = &#123;x:loc0.x+az.x, y:loc0.y+az.y&#125;;     staFollow.setClient(<span class="string">'location'</span>,loc);     box.add(staFollow);     <span class="keyword">return</span> staFollow; &#125;</div></pre></td></tr></table></figure>
+<p><img src="http://images2015.cnblogs.com/blog/311983/201611/311983-20161103144955643-1549309486.png" alt="picture"></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> azimuth = &#123;     bb: &#123;x: <span class="number">0</span>, y: linkWidth*zoom/<span class="number">2</span>&#125;,     tt: &#123;x: <span class="number">0</span>, y: -linkWidth*zoom/<span class="number">2</span>&#125;,     rr: &#123;x: linkWidth*zoom/<span class="number">2</span>, y: <span class="number">0</span>&#125;,     ll: &#123;x: -linkWidth/<span class="number">2</span>, y: <span class="number">0</span>&#125;,     br: &#123;x: linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>, y: linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>&#125;,     bl: &#123;x: -linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>, y: linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>&#125;,     tr: &#123;x: linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>, y: -linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>&#125;,     tl: &#123;x: -linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>, y: -linkWidth*zoom*<span class="number">0.7</span>/<span class="number">2</span>&#125;,     BB: &#123;x: <span class="number">0</span>, y: linkWidth*zoom&#125;,     TT: &#123;x: <span class="number">0</span>, y: -linkWidth*zoom&#125;,     RR: &#123;x: linkWidth*zoom, y: <span class="number">0</span>&#125;,     LL: &#123;x: -linkWidth, y: <span class="number">0</span>&#125;,     BR: &#123;x: linkWidth*zoom*<span class="number">0.7</span>, y: linkWidth*zoom*<span class="number">0.7</span>&#125;,     BL: &#123;x: -linkWidth*zoom*<span class="number">0.7</span>, y: linkWidth*zoom*<span class="number">0.7</span>&#125;,     TR: &#123;x: linkWidth*zoom*<span class="number">0.7</span>, y: -linkWidth*zoom*<span class="number">0.7</span>&#125;,     TL: &#123;x: -linkWidth*zoom*<span class="number">0.7</span>, y: -linkWidth*zoom*<span class="number">0.7</span>&#125; &#125;;</div></pre></td></tr></table></figure>
+<p>最后，想要看程序，或者想玩“地铁拖拖乐”的各位，都可以给我留言和发邮件：tw-service@servasoft.com。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持零壹博客</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://www.leonma.cn/2016/11/07/HTML5大数据可视化效果-二-可交互地铁线路图/index.html" data-title="HTML5大数据可视化效果（二）可交互地铁线路图" data-url="http://www.leonma.cn/2016/11/07/HTML5大数据可视化效果-二-可交互地铁线路图/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"zerone01"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner" style="text-align:center;">
+      <table width="100%" border="0">
+        <tr>
+          <td style="text-align:left">
+            Copyright &copy; 2014-2016 Leon Ma &nbsp; &nbsp;
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
+            Theme <a href="https://github.com/sykiechen/hexo-theme-hic17" target="_blank">HiC17</a> by Sykie Chen &nbsp; &nbsp;
+            Hosted on <a href="http://gitcafe.com/" target="_blank">Git Cafe</a>
+          </td>
+          <td style="text-align:right">
+            <div style="font-family: FontAwesome;font-size: 20px;">
+            <a href="http://weibo.com/3904642734" title="微博" target="_blank">&#61834;</a>&nbsp;
+            <a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp;
+            <a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+            <a href="https://www.facebook.com/sykiechencixi" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+            <a href="https://twitter.com/HKEY_C17" title="twitter" target="_blank">&#61593;</a>&nbsp;
+            <a href="http://www.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+            <a href="https://github.com/sykiechen" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+            <a href="https://plus.google.com/118157846818083514683" title="Google+" target="_blank">&#61653;</a>
+            </div><br>
+            <a href="/sitemap.xml">网站地图</a>&nbsp; &nbsp;
+            <a href="/atom.xml">订阅本站</a>&nbsp; &nbsp;
+            <a href="mailto:i@devchen.com" target="_blank">联系博主</a>&nbsp; &nbsp;
+            ICP 备案你妹
+          </td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

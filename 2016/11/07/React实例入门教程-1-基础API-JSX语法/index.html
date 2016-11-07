@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>React实例入门教程(1)基础API,JSX语法 | Zerone Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="#React实例入门教程(1)基础API,JSX语法　　毫无疑问，react是目前最最热门的框架(没有之一)，了解并学习使用React，可以说是现在每个前端工程师都需要的。　　在前端领域，一个框架为何会如此之火爆，无外乎两个原因：性能优秀，开发效率高。React当然集成了这两大优点。　　这要归功于React的两大特点，也是该框架一直强调的优势：　　1.虚拟dom与dom diff：在React中，">
+<meta property="og:type" content="article">
+<meta property="og:title" content="React实例入门教程(1)基础API,JSX语法">
+<meta property="og:url" content="http://www.leonma.cn/2016/11/07/React实例入门教程-1-基础API-JSX语法/index.html">
+<meta property="og:site_name" content="Zerone Blog">
+<meta property="og:description" content="#React实例入门教程(1)基础API,JSX语法　　毫无疑问，react是目前最最热门的框架(没有之一)，了解并学习使用React，可以说是现在每个前端工程师都需要的。　　在前端领域，一个框架为何会如此之火爆，无外乎两个原因：性能优秀，开发效率高。React当然集成了这两大优点。　　这要归功于React的两大特点，也是该框架一直强调的优势：　　1.虚拟dom与dom diff：在React中，">
+<meta property="og:updated_time" content="2016-11-07T14:45:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="React实例入门教程(1)基础API,JSX语法">
+<meta name="twitter:description" content="#React实例入门教程(1)基础API,JSX语法　　毫无疑问，react是目前最最热门的框架(没有之一)，了解并学习使用React，可以说是现在每个前端工程师都需要的。　　在前端领域，一个框架为何会如此之火爆，无外乎两个原因：性能优秀，开发效率高。React当然集成了这两大优点。　　这要归功于React的两大特点，也是该框架一直强调的优势：　　1.虚拟dom与dom diff：在React中，">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-React实例入门教程-1-基础API-JSX语法" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">React实例入门教程(1)基础API,JSX语法</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.07</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Leon Ma</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/HTML5/">HTML5</a>
+  </span>
+
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>#React实例入门教程(1)基础API,JSX语法<br>　　毫无疑问，react是目前最最热门的框架(没有之一)，了解并学习使用React，可以说是现在每个前端工程师都需要的。<br>　　在前端领域，一个框架为何会如此之火爆，无外乎两个原因：性能优秀，开发效率高。React当然集成了这两大优点。<br>　　这要归功于React的两大特点，也是该框架一直强调的优势：<br>　　1.虚拟dom与dom diff：在React中，一切的更新都是先更新虚拟dom，再根据react自带的dom diff 算法，进行对比计算，在实际dom中实现最小粒度的更新，这就是React性能优秀的原因了！<br>　　2.一切皆是组件：React强调一切皆是组件，那么组件就是React的核心元素，在使用React开发时，开发人员会对各种颗粒进行组件化开发，自然而然的提升了代码复用度，提升了开发效率。<br>　　本系列文章，每篇都会有个小实例，带领大家一步步的走进React开发的世界。<br>　　<br>文章预告　　　本系列文章分为<br>　　React实例入门教程(1)基础API,JSX语法–hello world<br>　　React实例入门教程(2)组件与组件的生命周期–弹窗组件<br>　　React实例入门教程(3)数据流之props与state–实时更新的倒计时组件<br>　　React实例入门教程(4)事件处理–事件丰富的swipe组件<br>　　React实例入门教程(5)总结–咪咕阅读首页开发实战<br>　　　　　　　　　　　　　　　　　　　　　　　　　<br>LET’S START　　作为本系列教程的第一篇，按照国际惯例，我们先从HELLO WORLD 开始~，那么先看看本例的代码吧：<br>　　<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="meta">&lt;!DOCTYPE html&gt;</span>; </div><div class="line"><span class="tag">&lt;<span class="name">html</span> <span class="attr">lang</span>=<span class="string">"en"</span>&gt;</span> </div><div class="line">	<span class="tag">&lt;<span class="name">head</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">meta</span> <span class="attr">charset</span>=<span class="string">"UTF-8"</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">title</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">title</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"react.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"react-dom.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">"browser.min.js"</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line">	<span class="tag">&lt;/<span class="name">head</span>&gt;</span> </div><div class="line">	<span class="tag">&lt;<span class="name">body</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"demo"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>     </div><div class="line">		<span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">"text/babel"</span>&gt;</span><span class="javascript">         </span></div><div class="line">			<span class="keyword">var</span> Helloworld = React.createClass(&#123; </div><div class="line">				render:<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;  </div><div class="line">            		<span class="keyword">return</span> <span class="xml"><span class="tag">&lt;<span class="name">div</span>&gt;</span>hello world<span class="tag">&lt;/<span class="name">div</span>&gt;</span></span>;             &#125;         			&#125;);</div><div class="line">              ReactDOM.render(<span class="xml"><span class="tag">&lt;<span class="name">Helloworld</span>/&gt;</span></span>,<span class="built_in">document</span>.getElementById(<span class="string">"demo"</span>)); </div><div class="line">        <span class="tag">&lt;/<span class="name">script</span>&gt;</span> </div><div class="line">    <span class="tag">&lt;/<span class="name">body</span>&gt;</span> </div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>　　以上代码需要注意：最后的<script>标签type是&ldquo;text/babel&rdquo;。因为React使用的是JSX语法，他与传统js语法不兼容，所以type要选择babel。<br>　　最开始引入的js中，react和react-dom是react基础库，而browser.js是用来线上分析JSX语法的，真实项目上线中并不会引用这个，而是再上线前进行编译（使用工具babel等）转换成传统js语法再上线。（因为browser线上编译很影响性能）。为了方便大家的学习，现在这里直接引入了该js。<br>从上面示例代码可以看到，我们使用一些API，这些API都是非常基础的，下面我来做简单的介绍：<br>从上面示例代码可以看到，我们使用一些API，这些API都是非常基础的，下面我来做简单的介绍：　　<br>React.createClass:　　　　前言里说到react一切皆是组件，那么React.createClass就是最基本的创建组件的方法，它的第一个传入参数是json对象，代表组件的主体，该json其中，有必带的和可选择的参数，其必带参数为render，类型是函数要求返回该组件的模版。<br>　　使用方式可见篇头示例，具体细节会在后续组件章节中做介绍。<br>　　<br>ReactDOM.render:　　ReactDOM.render 是 React 的最基本方法，用于将模板(html，jsx,React.createElement等)转为 HTML ，并插入指定的 DOM 节点。<br>　　看下面的示例代码</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"> 　ReactDOM.render(<span class="tag">&lt;<span class="name">h1</span>&gt;</span>HELLO,REACT!<span class="tag">&lt;/<span class="name">h1</span>&gt;</span>,document.getElementById("example"));</div></pre></td></tr></table></figure>
+<p>　　就是将一段html结构输出到id为example浏览器，效果如下：<br><img src="http://images2015.cnblogs.com/blog/354376/201611/354376-20161102150429518-2077470571.png" alt="picture"><br>&nbsp;<br>　　JSX即JavaScript XML，即一种在React内部构建的标签语法，React不使用JSX一样可以工作，但是使用JSX可以让代码简洁，提高代码可读性，因此推荐使用：<br>　　那么，我们来看看对比，前面示例代码中，使用了JSX语法的语句为：<br> <Helloword/> 　　如果不使用JSX语法将变成：<br> React.createElement(“Helloword”,{},””); 　　可见JSX语法的优势。<br>　　那么让我们来学习JSX语法：<br>　　JSX和HTML很像，但却不同于HTML，JSX中标签名可以是HTML标签，也可以是自己定义的组件，如前面示例中的Helloworld组件。那么我们来具体看看JSX与HTML的不同处和需要注意的地方：<br>　　<br>属性引用：　　<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"some-id"</span> <span class="attr">class</span>=<span class="string">"some-class"</span> <span class="attr">style</span>=<span class="string">"color:red;"</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>JSX ：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"someId"</span> <span class="attr">className</span>=<span class="string">&#123;someClass&#125;</span> <span class="attr">style</span>=<span class="string">&#123;&#123;color:red&#125;&#125;</span>&gt;</span>...<span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>　　如上示例所示，JSX语法中，属性的引入拥有HTML的方式（文本直接赋值）；也可以引用JS变量（如：someClass）,方式是使用大括号包裹，其中要注意的是，class在JSX中要写成className，style的 赋值要写成json的引入 ，如上例。<br>　　<br>条件判断：　　在JSX标签的属性中，我们可以使用条件判断来根据条件生成JSX，JSX允许的条件判断方式是，三目运算符，逻辑与(&amp;&amp;)运算符，使用变量，使用函数。<br>　　看面的示例代码：<br>　　给出一个函数：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">function getNumber()&#123; 　return Math.floor(Math.random()*100); &#125; 　　对应JSX片段：</div><div class="line">　　<span class="tag">&lt;<span class="name">div</span> <span class="attr">className</span>=<span class="string">&#123;this.state.num</span>&gt;</span>1?"demo1":"demo2"&#125; &gt;&#123;getNumber()&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span> 　　这段jsx 会根据this.state.num值来选择对应的class，并随机生成数字来填充内容。</div></pre></td></tr></table></figure></p>
+<p>事件绑定JSX中，和HTML事件绑定类似，对应的事件名称为onClick,onChange等：<br>JSX中，和HTML事件绑定类似，对应的事件名称为onClick,onChange等： 　　<div onClick={this.handleClick}>…</div> 　　<br>特殊用法　　数组引入：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var jsxArr = [<span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span>,<span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span>,<span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span>,<span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span>]; ReactDOM.render(<span class="tag">&lt;<span class="name">div</span>&gt;</span>&#123;jsxArr&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span>,...);  输出的结果等同于 ReactDOM.render(<span class="tag">&lt;<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>1<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>2<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>3<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;<span class="name">div</span>&gt;</span>4<span class="tag">&lt;/<span class="name">div</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span>,...);</div></pre></td></tr></table></figure></p>
+<p>JSX可以根据数组直接遍历产出JSX结构　　<br>循环遍历：<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">var demos= ['demo1', 'demo2', 'demo3']; ReactDOM.render(   <span class="tag">&lt;<span class="name">div</span>&gt;</span>   &#123;     demos.map(function (demo) &#123;       return <span class="tag">&lt;<span class="name">div</span>&gt;</span>Hello, &#123;demo&#125;<span class="tag">&lt;/<span class="name">div</span>&gt;</span>     &#125;)   &#125;   <span class="tag">&lt;/<span class="name">div</span>&gt;</span>,...);</div></pre></td></tr></table></figure></p>
+<p>产出的结果为：<br> Hello，demo1！ Hello，demo2！ Hello，demo3！  你看懂了么~</p>
+<p>以上就是对React 基础API，和 JSX语法的介绍讲解了，那么回头看看最初的示例代码，是不是已经了解如何使用了呢？</p>
+</script></p>
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持零壹博客</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://www.leonma.cn/2016/11/07/React实例入门教程-1-基础API-JSX语法/index.html" data-title="React实例入门教程(1)基础API,JSX语法" data-url="http://www.leonma.cn/2016/11/07/React实例入门教程-1-基础API-JSX语法/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"zerone01"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner" style="text-align:center;">
+      <table width="100%" border="0">
+        <tr>
+          <td style="text-align:left">
+            Copyright &copy; 2014-2016 Leon Ma &nbsp; &nbsp;
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
+            Theme <a href="https://github.com/sykiechen/hexo-theme-hic17" target="_blank">HiC17</a> by Sykie Chen &nbsp; &nbsp;
+            Hosted on <a href="http://gitcafe.com/" target="_blank">Git Cafe</a>
+          </td>
+          <td style="text-align:right">
+            <div style="font-family: FontAwesome;font-size: 20px;">
+            <a href="http://weibo.com/3904642734" title="微博" target="_blank">&#61834;</a>&nbsp;
+            <a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp;
+            <a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+            <a href="https://www.facebook.com/sykiechencixi" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+            <a href="https://twitter.com/HKEY_C17" title="twitter" target="_blank">&#61593;</a>&nbsp;
+            <a href="http://www.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+            <a href="https://github.com/sykiechen" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+            <a href="https://plus.google.com/118157846818083514683" title="Google+" target="_blank">&#61653;</a>
+            </div><br>
+            <a href="/sitemap.xml">网站地图</a>&nbsp; &nbsp;
+            <a href="/atom.xml">订阅本站</a>&nbsp; &nbsp;
+            <a href="mailto:i@devchen.com" target="_blank">联系博主</a>&nbsp; &nbsp;
+            ICP 备案你妹
+          </td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>

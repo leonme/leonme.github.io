@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 
 
-  <html class="light page-tags家乡">
+  <html class="light page-post">
 
 
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: 家乡 | Zerone Blog</title>
+  <title>遍历节点树 | Zerone Blog</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
@@ -15,15 +15,22 @@
     <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
   
 
-  <meta name="description" content="Leon的博客">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zerone Blog">
-<meta property="og:url" content="http://www.leonma.cn/tags/家乡/index.html">
+  <meta name="description" content="#遍历节点树从以下属性读出来的信息可以让我们了解相邻节点之间的关系。
+childNodes属性将返回一个数组，这个数组由给定元素节点的子节点构成：
+nodeList = node.childNodes这个属性返回的数组是一个nodeList集合。这个nodeList集合里的每个节点都是一个节点对象。这些节点对象都有着nodeType、nodeName、nodeValue等常见的节点属性。文本节点和">
+<meta property="og:type" content="article">
+<meta property="og:title" content="遍历节点树">
+<meta property="og:url" content="http://www.leonma.cn/2016/11/07/page57/index.html">
 <meta property="og:site_name" content="Zerone Blog">
-<meta property="og:description" content="Leon的博客">
+<meta property="og:description" content="#遍历节点树从以下属性读出来的信息可以让我们了解相邻节点之间的关系。
+childNodes属性将返回一个数组，这个数组由给定元素节点的子节点构成：
+nodeList = node.childNodes这个属性返回的数组是一个nodeList集合。这个nodeList集合里的每个节点都是一个节点对象。这些节点对象都有着nodeType、nodeName、nodeValue等常见的节点属性。文本节点和">
+<meta property="og:updated_time" content="2016-11-07T14:45:16.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zerone Blog">
-<meta name="twitter:description" content="Leon的博客">
+<meta name="twitter:title" content="遍历节点树">
+<meta name="twitter:description" content="#遍历节点树从以下属性读出来的信息可以让我们了解相邻节点之间的关系。
+childNodes属性将返回一个数组，这个数组由给定元素节点的子节点构成：
+nodeList = node.childNodes这个属性返回的数组是一个nodeList集合。这个nodeList集合里的每个节点都是一个节点对象。这些节点对象都有着nodeType、nodeName、nodeValue等常见的节点属性。文本节点和">
 
   
 
@@ -68,17 +75,8 @@
     <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
   
 
-  <div class="content content-tag">
-  <div class="page-header">
-
-  
-    <div class="breadcrumb">
-      <div class="location">标签</div>
-      <i class="icon-location"></i>
-    </div>
-  
-
-  
+  <div class="post-header CENTER">
+   
   <div class="toolbox">
     <a class="toolbox-entry" href="/">
       <span class="toolbox-entry-text">盒子</span>
@@ -168,232 +166,93 @@
   </div>
 
 
+</div>
 
-  <div class="box-blog-info">
-    <a class="avatar" href="/">
-      <img src="/images/zerone427.png" alt="" />
-    </a>
-    <div class="info">
-      <h3 class="name" style="font-family: calligraffittiregular">
-        Zerone Blog
-      </h3>
-      <div class="slogan">
-        一人一江湖
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-page57" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">遍历节点树</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.07</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Leon Ma</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/HTML5/">HTML5</a>
+  </span>
+
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>#遍历节点树<br>从以下属性读出来的信息可以让我们了解相邻节点之间的关系。</p>
+<p>childNodes属性将返回一个数组，这个数组由给定元素节点的子节点构成：</p>
+<p>nodeList = node.childNodes<br>这个属性返回的数组是一个nodeList集合。这个nodeList集合里的每个节点都是一个节点对象。这些节点对象都有着nodeType、nodeName、nodeValue等常见的节点属性。<br>文本节点和属性节点都不可能包含任何的子节点，所以他们的childNodes属性永远返回一个空数组。<br>　　如果只是想知道某个元素有没有子节点，可以使用hasChildNodes方法。<br>　　如果想知道某个元素有多少个节点，请使用childNodes数组的length属性：</p>
+<p>node.childNodes.length<br>即使元素只有一个子节点，childNodes属性也将返回一个节点数组而不是返回一个单个的节点，此时，childNodes数组的length的长度值将是1，比如说，如果某个网页上的document元素只有html元素这个子节点，那么document.childNodes[0].nodeName值将是HTML。<br>childNodes属性是一个只读属性，如果需要给某个元素增加子节点，可以使用appendChild()或insertBefore()方法；如果需要删除某个元素节点，可以使用removeChild()方法；在使用这几个方法曾、减某个元素子节点时，这个元素childNodes属性也将自动刷新。</p>
+<p>firstChild</p>
+<p>reference = node.firstChild<br>这个属性返回一个节点对象的引用指针，这个节点对象有nodeType、nodeName、nodeValue等常见属性。<br>文本节点和属性节点不可能在包含任何的子节点，所以他们的firstChild属性永远会返回null。<br>firstChild是一个只读属性。</p>
+<p>lastChild<br>lastChild：属性将返回一个给定元素的最后一个子节点：</p>
+<p>reference = node.lastChild<br>这个属性返回一个节点对熊引用指针，这个节点对象都有着nodeType、nodeName、nodeValue等常见节点属性。<br>文本节点属性和属性节点属性都不可能在包含任何子节点，所以lastChild属性永远返回null。<br>某个元素的lastChild属性等价于元素childNodes节点集合的最后一个节点：</p>
+<p>refrence = node.childNodes[element.childNodes.lelgth-1]<br>如果想知道某个元素有没有子节点，可以使用hasChildNodes方法，如果某个节点没有任何子节点，它的lastChild属性将返回null。<br>lastChild属性是一个只读属性。</p>
+<p>nextSibing<br>nextSibing属性将返回一个给定节点的下一个子节点：</p>
+<p>reference = node.nextSibing<br>这个属性返回一个节点对象引用指针，这个节点对象都有着nodeType、nodeName、nodeValue等常见属性。<br>如果给定节点后面没有同属于父节点的节点，它的nextSibling属性将返回null。<br>nextSibling属性是一个只读属性。</p>
+<p>parentNode<br>parentNode属性将返回一个给定节点的父节点：</p>
+<p>reference = node.parentNode<br>这个属性返回一个节点对象的引用指针，这个节点对象都有着nodeType、nodeName、nodeValue等常见节点属性。<br>parentNode属性返回的节点永远是一个元素节点，因为只有元素节点才有可能包含子节点，唯一的例外是document节点，他没有父节点，换句话说，document节点的parentNode属性将返回null。<br>parentNode属性是一个只读属性。</p>
+<p>previousSibling</p>
+<p>reference  = node.previousSibling<br>这个属性返回前一个节点对象的引用指针，这个节点对象都有着nodeType、nodeName、nodeValue等常见节点属性。<br>　　如果没有前一个元素节点返回null。<br>　　previousSibling属性是一个只读属性。</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持零壹博客</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
       </div>
     </div>
   </div>
 
-</div>
 
-  <section class="tag-box">
-  <div class="tag-title">标签</div>
-  <div class="tag-list">
-    
-      <a class="tag-item" href="#Hexo">
-        <span class="tag-name">Hexo</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
-      <a class="tag-item" href="#写作">
-        <span class="tag-name">写作</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
-      <a class="tag-item" href="#博客">
-        <span class="tag-name">博客</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
-      <a class="tag-item" href="#家乡">
-        <span class="tag-name">家乡</span>
-        <span class="tag-size">( 1 )</span>
-      </a>
-    
-      <a class="tag-item" href="#童年">
-        <span class="tag-name">童年</span>
-        <span class="tag-size">( 2 )</span>
-      </a>
-    
-      <a class="tag-item" href="#随感">
-        <span class="tag-name">随感</span>
-        <span class="tag-size">( 3 )</span>
-      </a>
-    
-      <a class="tag-item" href="#青春">
-        <span class="tag-name">青春</span>
-        <span class="tag-size">( 2 )</span>
-      </a>
-    
-  </div>
-</section>
-
-  <ul class="list-post"><li id="Hexo" class="item-category-name item-title item-title-0">
-  <!--
-    <a href="" class="text-year">
-   -->
-    Hexo
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-27</span>
-
-  
-  <a class="post-title" href="/2016/08/27/使用Hexo来写作/">使用Hexo来写作</a>
-
-
-</li>
-<li id="写作" class="item-category-name item-title item-title-1">
-  <!--
-    <a href="" class="text-year">
-   -->
-    写作
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-27</span>
-
-  
-  <a class="post-title" href="/2016/08/27/使用Hexo来写作/">使用Hexo来写作</a>
-
-
-</li>
-<li id="博客" class="item-category-name item-title item-title-2">
-  <!--
-    <a href="" class="text-year">
-   -->
-    博客
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-27</span>
-
-  
-  <a class="post-title" href="/2016/08/27/使用Hexo来写作/">使用Hexo来写作</a>
-
-
-</li>
-<li id="家乡" class="item-category-name item-title item-title-3">
-  <!--
-    <a href="" class="text-year">
-   -->
-    家乡
-    <span class="category-count">( 1 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-31</span>
-
-  
-  <a class="post-title" href="/2016/08/31/你不知道山里的故事/">你不知道山里的故事</a>
-
-
-</li>
-<li id="童年" class="item-category-name item-title item-title-4">
-  <!--
-    <a href="" class="text-year">
-   -->
-    童年
-    <span class="category-count">( 2 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-31</span>
-
-  
-  <a class="post-title" href="/2016/08/31/你不知道山里的故事/">你不知道山里的故事</a>
-
-
-</li>
-<li class="item-post item">
-  <span class="post-date">08-29</span>
-
-  
-  <a class="post-title" href="/2016/08/29/最好的我们/">最好的我们</a>
-
-
-</li>
-<li id="随感" class="item-category-name item-title item-title-0">
-  <!--
-    <a href="" class="text-year">
-   -->
-    随感
-    <span class="category-count">( 3 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-31</span>
-
-  
-  <a class="post-title" href="/2016/08/31/你不知道山里的故事/">你不知道山里的故事</a>
-
-
-</li>
-<li class="item-post item">
-  <span class="post-date">08-29</span>
-
-  
-  <a class="post-title" href="/2016/08/29/最好的我们/">最好的我们</a>
-
-
-</li>
-<li class="item-post item">
-  <span class="post-date">08-28</span>
-
-  
-  <a class="post-title" href="/2016/08/28/零壹随感/">零壹随感</a>
-
-
-</li>
-<li id="青春" class="item-category-name item-title item-title-1">
-  <!--
-    <a href="" class="text-year">
-   -->
-    青春
-    <span class="category-count">( 2 )</span>
-  <!--
-  </a>
-   -->
-</li>
-<li class="item-post item">
-  <span class="post-date">08-31</span>
-
-  
-  <a class="post-title" href="/2016/08/31/你不知道山里的故事/">你不知道山里的故事</a>
-
-
-</li>
-<li class="item-post item">
-  <span class="post-date">08-29</span>
-
-  
-  <a class="post-title" href="/2016/08/29/最好的我们/">最好的我们</a>
-
-
-</li>
-</ul>
-</div>
 
 
   <a id="backTop" class="back-top">
     <i class="icon-angle-up"></i>
   </a>
-
-
 
 
 
@@ -492,6 +351,35 @@
 </div>
 
 
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://www.leonma.cn/2016/11/07/page57/index.html" data-title="遍历节点树" data-url="http://www.leonma.cn/2016/11/07/page57/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"zerone01"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
 
   
   <div class="outer">

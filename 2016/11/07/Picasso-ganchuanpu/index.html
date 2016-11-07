@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>Picasso ganchuanpu | Zerone Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="forsigner,前端,设计,Hexo主题,前端开发,用户体验,设计,frontend,design,nodejs,JavaScript" />
+  
+
+  <meta name="description" content="#Picasso ganchuanpuPicasso是Square公司出品的一个强大的图片下载和缓存图片库1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加载，否则会导致图片错位，Picasso已经解决了这个问题。2）使用复杂的图片压缩转换来尽可能的减少内存消耗3）自带内存和硬盘二级缓存功能
+1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Picasso ganchuanpu">
+<meta property="og:url" content="http://www.leonma.cn/2016/11/07/Picasso-ganchuanpu/index.html">
+<meta property="og:site_name" content="Zerone Blog">
+<meta property="og:description" content="#Picasso ganchuanpuPicasso是Square公司出品的一个强大的图片下载和缓存图片库1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加载，否则会导致图片错位，Picasso已经解决了这个问题。2）使用复杂的图片压缩转换来尽可能的减少内存消耗3）自带内存和硬盘二级缓存功能
+1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/1044471/201611/1044471-20161103222330440-1256902303.png">
+<meta property="og:image" content="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif">
+<meta property="og:image" content="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif">
+<meta property="og:image" content="http://images2015.cnblogs.com/blog/1044471/201611/1044471-20161103225834799-284883798.png">
+<meta property="og:updated_time" content="2016-11-07T14:45:16.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Picasso ganchuanpu">
+<meta name="twitter:description" content="#Picasso ganchuanpuPicasso是Square公司出品的一个强大的图片下载和缓存图片库1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加载，否则会导致图片错位，Picasso已经解决了这个问题。2）使用复杂的图片压缩转换来尽可能的减少内存消耗3）自带内存和硬盘二级缓存功能
+1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加">
+<meta name="twitter:image" content="http://images2015.cnblogs.com/blog/1044471/201611/1044471-20161103222330440-1256902303.png">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-Picasso-ganchuanpu" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">Picasso ganchuanpu</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.07</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Leon Ma</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/HTML5/">HTML5</a>
+  </span>
+
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <p>#Picasso ganchuanpu<br>Picasso是Square公司出品的一个强大的图片下载和缓存图片库<br>1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加载，否则会导致图片错位，Picasso已经解决了这个问题。<br>2）使用复杂的图片压缩转换来尽可能的减少内存消耗<br>3）自带内存和硬盘二级缓存功能</p>
+<p>1）在adapter中需要取消已经不在视野范围的ImageView图片资源的加载，否则会导致图片错位，Picasso已经解决了这个问题。<br>2）使用复杂的图片压缩转换来尽可能的减少内存消耗<br>3）自带内存和硬盘二级缓存功能&nbsp;<br><img src="http://images2015.cnblogs.com/blog/1044471/201611/1044471-20161103222330440-1256902303.png" alt="picture"><br>①普通加载图片</p>
+<p>Picasso.with(PicassoActivity.this)<br>　　　　.load(“<a href="http://n.sinaimg.cn/translate/20160819/9BpA-fxvcsrn8627957.jpg" target="_blank" rel="external">http://n.sinaimg.cn/translate/20160819/9BpA-fxvcsrn8627957.jpg</a>“)<br>　　　　.into(ivPicassoResult1);</p>
+<p>②裁剪的方式加载图片</p>
+<p>Picasso.with(PicassoActivity.this)<br>　　　　.load(“<a href="http://n.sinaimg.cn/translate/20160819/9BpA-fxvcsrn8627957.jpg" target="_blank" rel="external">http://n.sinaimg.cn/translate/20160819/9BpA-fxvcsrn8627957.jpg</a>“)<br>　　　　.resize(100,100)<br>　　　　.into(ivPicassoResult1);　　<br>③选择180度</p>
+<p>Picasso.with(PicassoActivity.this)<br>　　　　.load(“<a href="http://n.sinaimg.cn/translate/20160819/9BpA-fxvcsrn8627957.jpg" target="_blank" rel="external">http://n.sinaimg.cn/translate/20160819/9BpA-fxvcsrn8627957.jpg</a>“)<br>　　　　.rotate(180)<br>　　　　.into(ivPicassoResult1);</p>
+<p>资源加载的方法 - placeholder(xxx). 设置资源加载过程中的显示的Drawable。</p>
+<pre><code>- error(xxx).设置load失败时显示的Drawable。
+- into(xxx) 设置资源加载到的目标 包括ImageView Target等
+
+- error(xxx).设置load失败时显示的Drawable。
+- into(xxx) 设置资源加载到的目标 包括ImageView Target等eg:Adapter中getView()方法中
+</code></pre><p>// 加载图片<br>Picasso.with(mContext) .load(Constants.IMAGES[position]) .placeholder(R.drawable.atguigu_logo) .error(R.drawable.atguigu_logo) .into(holder.iv);</p>
+<p>&nbsp;<br><img src="http://images.cnblogs.com/OutliningIndicators/ContractedBlock.gif" alt="picture"><br><img src="http://images.cnblogs.com/OutliningIndicators/ExpandedBlockStart.gif" alt="picture"></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div></pre></td><td class="code"><pre><div class="line"> <span class="number">1</span> <span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PicassoUtil</span> </span>&#123;</div><div class="line"> <span class="number">2</span>     <span class="comment">//加载本地图片</span></div><div class="line"> <span class="number">3</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, <span class="keyword">int</span> resId, ImageView imgView)</span></span>&#123;</div><div class="line"> <span class="number">4</span>         Picasso.with(context)</div><div class="line"> <span class="number">5</span>                 .load(resId)</div><div class="line"> <span class="number">6</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"> <span class="number">7</span>                 .fit()</div><div class="line"> <span class="number">8</span>                 .into(imgView);</div><div class="line"> <span class="number">9</span>     &#125;</div><div class="line"><span class="number">10</span>     <span class="comment">//按照一定的宽高加载本地图片，带有加载错误和默认图片</span></div><div class="line"><span class="number">11</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context,<span class="keyword">int</span> resId,ImageView imgView,<span class="keyword">int</span> weight,<span class="keyword">int</span> height)</span></span>&#123;</div><div class="line"><span class="number">12</span>         Picasso.with(context)</div><div class="line"><span class="number">13</span>                 .load(resId)<span class="comment">//加载本地图片</span></div><div class="line"><span class="number">14</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">15</span>                 .resize(weight,height)<span class="comment">//设置图片的宽高</span></div><div class="line"><span class="number">16</span>                 .into(imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">17</span>     &#125;</div><div class="line"><span class="number">18</span>     <span class="comment">//加载网络图片到imgview,带有加载错误和默认图片</span></div><div class="line"><span class="number">19</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, String imgurl, <span class="keyword">int</span> resId, ImageView imgView)</span></span>&#123;</div><div class="line"><span class="number">20</span>         Picasso.with(context)</div><div class="line"><span class="number">21</span>                 .load(imgurl)<span class="comment">//加载网络图片的url</span></div><div class="line"><span class="number">22</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">23</span>                 .placeholder(resId)<span class="comment">//默认图片</span></div><div class="line"><span class="number">24</span>                 .error(resId)<span class="comment">//加载错误的图片</span></div><div class="line"><span class="number">25</span>                 .fit()<span class="comment">//图片的宽高等于控件的宽高</span></div><div class="line"><span class="number">26</span>                 .into(imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">27</span>     &#125;</div><div class="line"><span class="number">28</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, String imgurl, ImageView imgView)</span></span>&#123;</div><div class="line"><span class="number">29</span>         Picasso.with(context)</div><div class="line"><span class="number">30</span>                 .load(imgurl)<span class="comment">//加载网络图片的url</span></div><div class="line"><span class="number">31</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">32</span>                 .fit()<span class="comment">//图片的宽高等于控件的宽高</span></div><div class="line"><span class="number">33</span>                 .into(imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">34</span>     &#125;</div><div class="line"><span class="number">35</span>     <span class="comment">//加载网络图片到Viewpager</span></div><div class="line"><span class="number">36</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, String imgurl, ViewPager imgView)</span></span>&#123;</div><div class="line"><span class="number">37</span>         Picasso.with(context)</div><div class="line"><span class="number">38</span>                 .load(imgurl)<span class="comment">//加载网络图片的url</span></div><div class="line"><span class="number">39</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">40</span>                 .fit()<span class="comment">//图片的宽高等于控件的宽高</span></div><div class="line"><span class="number">41</span>                 .into((Target) imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">42</span>     &#125;</div><div class="line"><span class="number">43</span>     <span class="comment">//加载网络图片到Viewpager，带有加载错误和默认图片</span></div><div class="line"><span class="number">44</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, String imgurl, <span class="keyword">int</span> resId, ViewPager imgView)</span></span>&#123;</div><div class="line"><span class="number">45</span>         Picasso.with(context)</div><div class="line"><span class="number">46</span>                 .load(imgurl)<span class="comment">//加载网络图片的url</span></div><div class="line"><span class="number">47</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">48</span>                 .placeholder(resId)<span class="comment">//默认图片</span></div><div class="line"><span class="number">49</span>                 .error(resId)<span class="comment">//加载错误的图片</span></div><div class="line"><span class="number">50</span>                 .fit()<span class="comment">//图片的宽高等于控件的宽高</span></div><div class="line"><span class="number">51</span>                 .into((Target) imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">52</span>     &#125;</div><div class="line"><span class="number">53</span>     <span class="comment">//按照设定的宽高加载网络图片到imgview</span></div><div class="line"><span class="number">54</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, String imgurl,ImageView imgView,<span class="keyword">int</span> weight,<span class="keyword">int</span> height)</span></span>&#123;</div><div class="line"><span class="number">55</span>         Picasso.with(context)</div><div class="line"><span class="number">56</span>                 .load(imgurl)<span class="comment">//加载网络图片的url</span></div><div class="line"><span class="number">57</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">58</span>                 .resize(weight,height)<span class="comment">//设置图片的宽高</span></div><div class="line"><span class="number">59</span>                 .into(imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">60</span>     &#125;</div><div class="line"><span class="number">61</span>     <span class="comment">//按照设定的宽高加载网络图片到imgview，带有加载错误和默认图片</span></div><div class="line"><span class="number">62</span>     <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">setImg</span><span class="params">(Context context, String imgurl, <span class="keyword">int</span> resId,<span class="keyword">int</span> weight,<span class="keyword">int</span> height, ImageView imgView)</span></span>&#123;</div><div class="line"><span class="number">63</span>         Picasso.with(context)</div><div class="line"><span class="number">64</span>                 .load(imgurl)<span class="comment">//加载网络图片的url</span></div><div class="line"><span class="number">65</span>                 .config(Bitmap.Config.RGB_565)<span class="comment">//8位RGB位图</span></div><div class="line"><span class="number">66</span>                 .placeholder(resId)<span class="comment">//默认图片</span></div><div class="line"><span class="number">67</span>                 .error(resId)<span class="comment">//加载错误的图片</span></div><div class="line"><span class="number">68</span>                 .resize(weight,height)<span class="comment">//设置图片的宽高</span></div><div class="line"><span class="number">69</span>                 .into(imgView);<span class="comment">//把图片加载到控件上</span></div><div class="line"><span class="number">70</span>     &#125;</div><div class="line"><span class="number">71</span> &#125;</div></pre></td></tr></table></figure>
+<p>PicassoUtil<br><img src="http://images2015.cnblogs.com/blog/1044471/201611/1044471-20161103225834799-284883798.png" alt="picture"><br>在module的gradle中添加转换库:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">dependencies &#123;</div><div class="line"> 	compile <span class="string">'jp.wasabeef:picasso-transformations:2.1.0'</span></div><div class="line">    <span class="comment">// If you want to use the GPU Filters</span></div><div class="line">    compile <span class="string">'jp.co.cyberagent.android.gpuimage:gpuimage-library:1.4.1'</span></div><div class="line">&#125; repositories &#123;</div><div class="line">    jcenter()</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>Activity中:<br><figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">List&amp;lt;String&amp;gt; data = <span class="keyword">new</span> ArrayList&amp;lt;&amp;gt;();</div><div class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i&amp;lt;= <span class="number">36</span>; i++)&#123; data.add(i+<span class="string">""</span>);</div><div class="line">&#125;</div><div class="line"><span class="comment">// 初始化listview</span></div><div class="line">PicassoTransformationsAdapter picassoTransformationsAdapter = <span class="keyword">new</span> PicassoTransformationsAdapter(PicassoTransfromationsActivity.<span class="keyword">this</span>,data);</div><div class="line">lvPicassoTransfromations.setAdapter(picassoTransformationsAdapter);</div></pre></td></tr></table></figure></p>
+<p>PicassoListviewAdapter：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div><div class="line">43</div><div class="line">44</div><div class="line">45</div><div class="line">46</div><div class="line">47</div><div class="line">48</div><div class="line">49</div><div class="line">50</div><div class="line">51</div><div class="line">52</div><div class="line">53</div><div class="line">54</div><div class="line">55</div><div class="line">56</div><div class="line">57</div><div class="line">58</div><div class="line">59</div><div class="line">60</div><div class="line">61</div><div class="line">62</div><div class="line">63</div><div class="line">64</div><div class="line">65</div><div class="line">66</div><div class="line">67</div><div class="line">68</div><div class="line">69</div><div class="line">70</div><div class="line">71</div><div class="line">72</div><div class="line">73</div><div class="line">74</div><div class="line">75</div><div class="line">76</div><div class="line">77</div><div class="line">78</div><div class="line">79</div><div class="line">80</div><div class="line">81</div><div class="line">82</div><div class="line">83</div><div class="line">84</div><div class="line">85</div><div class="line">86</div><div class="line">87</div><div class="line">88</div><div class="line">89</div><div class="line">90</div><div class="line">91</div><div class="line">92</div><div class="line">93</div><div class="line">94</div><div class="line">95</div><div class="line">96</div><div class="line">97</div><div class="line">98</div><div class="line">99</div><div class="line">100</div><div class="line">101</div><div class="line">102</div><div class="line">103</div><div class="line">104</div><div class="line">105</div><div class="line">106</div><div class="line">107</div><div class="line">108</div><div class="line">109</div><div class="line">110</div><div class="line">111</div><div class="line">112</div><div class="line">113</div><div class="line">114</div><div class="line">115</div><div class="line">116</div><div class="line">117</div><div class="line">118</div><div class="line">119</div><div class="line">120</div><div class="line">121</div><div class="line">122</div><div class="line">123</div><div class="line">124</div><div class="line">125</div><div class="line">126</div><div class="line">127</div><div class="line">128</div><div class="line">129</div><div class="line">130</div><div class="line">131</div><div class="line">132</div><div class="line">133</div><div class="line">134</div><div class="line">135</div><div class="line">136</div><div class="line">137</div><div class="line">138</div><div class="line">139</div><div class="line">140</div><div class="line">141</div><div class="line">142</div><div class="line">143</div><div class="line">144</div><div class="line">145</div><div class="line">146</div><div class="line">147</div><div class="line">148</div><div class="line">149</div><div class="line">150</div><div class="line">151</div><div class="line">152</div><div class="line">153</div><div class="line">154</div><div class="line">155</div><div class="line">156</div><div class="line">157</div><div class="line">158</div><div class="line">159</div><div class="line">160</div><div class="line">161</div><div class="line">162</div><div class="line">163</div><div class="line">164</div><div class="line">165</div><div class="line">166</div><div class="line">167</div><div class="line">168</div><div class="line">169</div><div class="line">170</div><div class="line">171</div><div class="line">172</div><div class="line">173</div><div class="line">174</div><div class="line">175</div><div class="line">176</div><div class="line">177</div><div class="line">178</div><div class="line">179</div><div class="line">180</div><div class="line">181</div><div class="line">182</div><div class="line">183</div><div class="line">184</div><div class="line">185</div><div class="line">186</div><div class="line">187</div><div class="line">188</div><div class="line">189</div><div class="line">190</div><div class="line">191</div><div class="line">192</div><div class="line">193</div><div class="line">194</div><div class="line">195</div><div class="line">196</div><div class="line">197</div><div class="line">198</div><div class="line">199</div><div class="line">200</div><div class="line">201</div><div class="line">202</div><div class="line">203</div><div class="line">204</div><div class="line">205</div><div class="line">206</div><div class="line">207</div><div class="line">208</div><div class="line">209</div><div class="line">210</div><div class="line">211</div><div class="line">212</div><div class="line">213</div><div class="line">214</div><div class="line">215</div><div class="line">216</div><div class="line">217</div><div class="line">218</div><div class="line">219</div><div class="line">220</div><div class="line">221</div><div class="line">222</div><div class="line">223</div><div class="line">224</div><div class="line">225</div><div class="line">226</div><div class="line">227</div><div class="line">228</div><div class="line">229</div><div class="line">230</div><div class="line">231</div><div class="line">232</div><div class="line">233</div><div class="line">234</div><div class="line">235</div><div class="line">236</div><div class="line">237</div><div class="line">238</div><div class="line">239</div><div class="line">240</div><div class="line">241</div><div class="line">242</div><div class="line">243</div><div class="line">244</div><div class="line">245</div><div class="line">246</div><div class="line">247</div><div class="line">248</div><div class="line">249</div><div class="line">250</div><div class="line">251</div><div class="line">252</div><div class="line">253</div><div class="line">254</div><div class="line">255</div><div class="line">256</div><div class="line">257</div><div class="line">258</div><div class="line">259</div><div class="line">260</div><div class="line">261</div><div class="line">262</div><div class="line">263</div><div class="line">264</div><div class="line">265</div><div class="line">266</div><div class="line">267</div><div class="line">268</div><div class="line">269</div><div class="line">270</div><div class="line">271</div><div class="line">272</div><div class="line">273</div><div class="line">274</div><div class="line">275</div><div class="line">276</div><div class="line">277</div><div class="line">278</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PicassoTransformationsAdapter</span> <span class="keyword">extends</span> <span class="title">BaseAdapter</span> </span>&#123;</div><div class="line">    <span class="keyword">private</span> Context mContext;</div><div class="line">    <span class="keyword">private</span> List&amp;lt;String&amp;gt; mData;     <span class="function"><span class="keyword">public</span> <span class="title">PicassoTransformationsAdapter</span><span class="params">(Context context, List&amp;lt;String&amp;gt; data)</span> </span>&#123;</div><div class="line">        mContext = context;</div><div class="line">        mData = data;</div><div class="line">    &#125;     <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">getCount</span><span class="params">()</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> mData == <span class="keyword">null</span> ? <span class="number">0</span> : mData.size();</div><div class="line">    &#125;     <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> Object <span class="title">getItem</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="keyword">null</span>;</div><div class="line">    &#125;     <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">long</span> <span class="title">getItemId</span><span class="params">(<span class="keyword">int</span> position)</span> </span>&#123;</div><div class="line">        <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">    &#125;     <span class="meta">@Override</span></div><div class="line">    <span class="function"><span class="keyword">public</span> View <span class="title">getView</span><span class="params">(<span class="keyword">int</span> position, View convertView, ViewGroup parent)</span> </span>&#123;         ViewHolder holder;</div><div class="line">        <span class="keyword">if</span>(convertView == <span class="keyword">null</span>) &#123;</div><div class="line">            convertView = View.inflate(mContext, R.layout.item_picasso_transformations,<span class="keyword">null</span>);             holder = <span class="keyword">new</span> ViewHolder(convertView);             convertView.setTag(holder);</div><div class="line">        &#125;<span class="keyword">else</span> &#123;</div><div class="line">            holder = (ViewHolder) convertView.getTag();</div><div class="line">        &#125;         <span class="comment">// 显示名称</span></div><div class="line">        holder.name.setText(<span class="string">"item"</span>+(position + <span class="number">1</span>));         <span class="keyword">int</span> integer = Integer.parseInt(mData.get(position));         <span class="keyword">switch</span> (integer) &#123;             <span class="keyword">case</span> <span class="number">1</span>: &#123;</div><div class="line">                <span class="keyword">int</span> width = Utils.dip2px(mContext, <span class="number">133.33f</span>);</div><div class="line">                <span class="keyword">int</span> height = Utils.dip2px(mContext, <span class="number">126.33f</span>);</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .resize(width, height)</div><div class="line">                        .centerCrop()</div><div class="line">                        .transform((<span class="keyword">new</span> MaskTransformation(mContext, R.drawable.mask_starfish)))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">case</span> <span class="number">2</span>: &#123;</div><div class="line">                <span class="keyword">int</span> width = Utils.dip2px(mContext, <span class="number">150.0f</span>);</div><div class="line">                <span class="keyword">int</span> height = Utils.dip2px(mContext, <span class="number">100.0f</span>);</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .resize(width, height)</div><div class="line">                        .centerCrop()</div><div class="line">                        .transform(<span class="keyword">new</span> MaskTransformation(mContext, R.drawable.chat_me_mask))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            &#125;</div><div class="line">            <span class="keyword">case</span> <span class="number">3</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.LEFT,</div><div class="line">                                CropTransformation.GravityVertical.TOP))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">4</span>:</div><div class="line">                Picasso.with(mContext).load(R.drawable.demo)</div><div class="line">                        <span class="comment">// 300, 100, CropTransformation.GravityHorizontal.LEFT, CropTransformation.GravityVertical.CENTER))</span></div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>)).into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">5</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.LEFT,</div><div class="line">                                CropTransformation.GravityVertical.BOTTOM))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">6</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.TOP))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">7</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">8</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.BOTTOM))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">9</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.RIGHT,</div><div class="line">                                CropTransformation.GravityVertical.TOP))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">10</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.RIGHT,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">11</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">300</span>, <span class="number">100</span>, CropTransformation.GravityHorizontal.RIGHT,</div><div class="line">                                CropTransformation.GravityVertical.BOTTOM))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">12</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation((<span class="keyword">float</span>) <span class="number">16</span> / (<span class="keyword">float</span>) <span class="number">9</span>,</div><div class="line">                                CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">13</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation((<span class="keyword">float</span>) <span class="number">4</span> / (<span class="keyword">float</span>) <span class="number">3</span>,</div><div class="line">                                CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">14</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">3</span>, CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">15</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">3</span>, CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.TOP))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">16</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation(<span class="number">1</span>, CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">17</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation((<span class="keyword">float</span>) <span class="number">0.5</span>, (<span class="keyword">float</span>) <span class="number">0.5</span>,</div><div class="line">                                CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">18</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation((<span class="keyword">float</span>) <span class="number">0.5</span>, (<span class="keyword">float</span>) <span class="number">0.5</span>,</div><div class="line">                                CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.TOP))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">19</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation((<span class="keyword">float</span>) <span class="number">0.5</span>, (<span class="keyword">float</span>) <span class="number">0.5</span>,</div><div class="line">                                CropTransformation.GravityHorizontal.RIGHT,</div><div class="line">                                CropTransformation.GravityVertical.BOTTOM))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">20</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropTransformation((<span class="keyword">float</span>) <span class="number">0.5</span>, <span class="number">0</span>, (<span class="keyword">float</span>) <span class="number">4</span> / (<span class="keyword">float</span>) <span class="number">3</span>,</div><div class="line">                                CropTransformation.GravityHorizontal.CENTER,</div><div class="line">                                CropTransformation.GravityVertical.CENTER))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">21</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropSquareTransformation())</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">22</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> CropCircleTransformation())</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">23</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> ColorFilterTransformation(Color.argb(<span class="number">80</span>, <span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>)))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">24</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> GrayscaleTransformation())</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">25</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> RoundedCornersTransformation(<span class="number">30</span>, <span class="number">0</span>,</div><div class="line">                                RoundedCornersTransformation.CornerType.BOTTOM_LEFT))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">26</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> BlurTransformation(mContext, <span class="number">25</span>, <span class="number">1</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">27</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.demo)</div><div class="line">                        .transform(<span class="keyword">new</span> ToonFilterTransformation(mContext))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">28</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> SepiaFilterTransformation(mContext))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">29</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> ContrastFilterTransformation(mContext, <span class="number">2.0f</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">30</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> InvertFilterTransformation(mContext))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">31</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> PixelationFilterTransformation(mContext, <span class="number">20</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">32</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> SketchFilterTransformation(mContext))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">33</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> SwirlFilterTransformation(mContext, <span class="number">0.5f</span>, <span class="number">1.0f</span>, <span class="keyword">new</span> PointF(<span class="number">0.5f</span>, <span class="number">0.5f</span>)))</div><div class="line">                        .into(holder.image);                 <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">34</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> BrightnessFilterTransformation(mContext, <span class="number">0.5f</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">35</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> KuwaharaFilterTransformation(mContext, <span class="number">25</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">            <span class="keyword">case</span> <span class="number">36</span>:</div><div class="line">                Picasso.with(mContext)</div><div class="line">                        .load(R.drawable.check)</div><div class="line">                        .transform(<span class="keyword">new</span> VignetteFilterTransformation(mContext, <span class="keyword">new</span> PointF(<span class="number">0.5f</span>, <span class="number">0.5f</span>),</div><div class="line">                                <span class="keyword">new</span> <span class="keyword">float</span>[]&#123;<span class="number">0.0f</span>, <span class="number">0.0f</span>, <span class="number">0.0f</span>&#125;, <span class="number">0f</span>, <span class="number">0.75f</span>))</div><div class="line">                        .into(holder.image);</div><div class="line">                <span class="keyword">break</span>;</div><div class="line">        &#125;</div><div class="line">        </div><div class="line">        <span class="keyword">return</span> convertView;</div><div class="line">    &#125;     <span class="class"><span class="keyword">class</span> <span class="title">ViewHolder</span></span>&#123;         <span class="meta">@Bind</span>(R.id.iv_picasso)</div><div class="line">        ImageView image;         <span class="meta">@Bind</span>(R.id.tv_picasso)</div><div class="line">        TextView name;         <span class="function"><span class="keyword">public</span> <span class="title">ViewHolder</span><span class="params">(View view)</span> </span>&#123;             ButterKnife.bind(<span class="keyword">this</span>, view);</div><div class="line">        &#125;</div><div class="line">    &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持零壹博客</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://www.leonma.cn/2016/11/07/Picasso-ganchuanpu/index.html" data-title="Picasso ganchuanpu" data-url="http://www.leonma.cn/2016/11/07/Picasso-ganchuanpu/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"zerone01"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+  <div class="outer">
+    <div id="footer-info" class="inner" style="text-align:center;">
+      <table width="100%" border="0">
+        <tr>
+          <td style="text-align:left">
+            Copyright &copy; 2014-2016 Leon Ma &nbsp; &nbsp;
+            Powered by <a href="http://hexo.io/" target="_blank">Hexo</a><br>
+            Theme <a href="https://github.com/sykiechen/hexo-theme-hic17" target="_blank">HiC17</a> by Sykie Chen &nbsp; &nbsp;
+            Hosted on <a href="http://gitcafe.com/" target="_blank">Git Cafe</a>
+          </td>
+          <td style="text-align:right">
+            <div style="font-family: FontAwesome;font-size: 20px;">
+            <a href="http://weibo.com/3904642734" title="微博" target="_blank">&#61834;</a>&nbsp;
+            <a href="http://www.renren.com/287137027" title="人人" target="_blank">&#61835;</a>&nbsp;
+            <a href="http://user.qzone.qq.com/525969441" title="QQ空间" target="_blank">&#61910;</a>&nbsp;
+            <a href="https://www.facebook.com/sykiechencixi" title="Facebook" target="_blank">&#62000;</a>&nbsp;
+            <a href="https://twitter.com/HKEY_C17" title="twitter" target="_blank">&#61593;</a>&nbsp;
+            <a href="http://www.linkedin.com/in/sykiechen" title="LinkedIn" target="_blank">&#61665;</a>&nbsp;
+            <a href="https://github.com/sykiechen" title="GitHub" target="_blank">&#61595;</a>&nbsp;
+            <a href="https://plus.google.com/118157846818083514683" title="Google+" target="_blank">&#61653;</a>
+            </div><br>
+            <a href="/sitemap.xml">网站地图</a>&nbsp; &nbsp;
+            <a href="/atom.xml">订阅本站</a>&nbsp; &nbsp;
+            <a href="mailto:i@devchen.com" target="_blank">联系博主</a>&nbsp; &nbsp;
+            ICP 备案你妹
+          </td>
+        </tr>
+      </table>
+    </div>
+</div>
+
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
