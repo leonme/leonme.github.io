@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+
+  <html class="light page-post">
+
+
+<head>
+  <meta charset="utf-8">
+  
+  <title>加快git传输速度 | Zerone Blog</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  
+    <meta name="keywords" content="git," />
+  
+
+  <meta name="description" content="加快git传输速度
+​    最近遇到了个比较棘手的事情。公司是外企，在公司github同步代码下载速度达到1.5-2.3M/S，但是每到家同步github的代码下载速度只有2-4kb/s，拉一套源码就几个小时的事情。
+​    实在无法忍受这龟速，就自己办理的一个8M网速的宽带，10号以后自动提速到12M，，可是拉代码速度依旧只有70-160kb/s。
+​    这下简直无法忍受，只好自己想办法">
+<meta property="og:type" content="article">
+<meta property="og:title" content="加快git传输速度">
+<meta property="og:url" content="http://www.leonma.cn/2016/11/10/加快git传输速度/index.html">
+<meta property="og:site_name" content="Zerone Blog">
+<meta property="og:description" content="加快git传输速度
+​    最近遇到了个比较棘手的事情。公司是外企，在公司github同步代码下载速度达到1.5-2.3M/S，但是每到家同步github的代码下载速度只有2-4kb/s，拉一套源码就几个小时的事情。
+​    实在无法忍受这龟速，就自己办理的一个8M网速的宽带，10号以后自动提速到12M，，可是拉代码速度依旧只有70-160kb/s。
+​    这下简直无法忍受，只好自己想办法">
+<meta property="og:image" content="http://www.thebeijinger.com/files/u93526/greatfirewall1_616.jpg">
+<meta property="og:updated_time" content="2016-11-09T17:07:35.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="加快git传输速度">
+<meta name="twitter:description" content="加快git传输速度
+​    最近遇到了个比较棘手的事情。公司是外企，在公司github同步代码下载速度达到1.5-2.3M/S，但是每到家同步github的代码下载速度只有2-4kb/s，拉一套源码就几个小时的事情。
+​    实在无法忍受这龟速，就自己办理的一个8M网速的宽带，10号以后自动提速到12M，，可是拉代码速度依旧只有70-160kb/s。
+​    这下简直无法忍受，只好自己想办法">
+<meta name="twitter:image" content="http://www.thebeijinger.com/files/u93526/greatfirewall1_616.jpg">
+
+  
+
+  
+    <link rel="icon" href="/favicon.ico">
+  
+
+  <link href="/css/styles.css?v=028c63b1" rel="stylesheet">
+
+
+  
+    <link rel="stylesheet" href="/css/personal-style.css">
+  
+
+  
+
+  
+
+  
+<script>
+(function(){
+    var bp = document.createElement('script');
+    var curProtocol = window.location.protocol.split(':')[0];
+    if (curProtocol === 'https') {
+        bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';        
+    }
+    else {
+        bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+    }
+    var s = document.getElementsByTagName("script")[0];
+    s.parentNode.insertBefore(bp, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+
+
+  
+    <span id="toolbox-mobile" class="toolbox-mobile">盒子</span>
+  
+
+  <div class="post-header CENTER">
+   
+  <div class="toolbox">
+    <a class="toolbox-entry" href="/">
+      <span class="toolbox-entry-text">盒子</span>
+      <i class="icon-angle-down"></i>
+      <i class="icon-home"></i>
+    </a>
+    <ul class="list-toolbox">
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/archives/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            博客
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/category/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            分类
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/tag/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            标签
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/link/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            友链
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/about/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            关于
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/atom.xml"
+            rel="noopener noreferrer"
+            target="_blank"
+            >
+            RSS
+          </a>
+        </li>
+      
+        <li class="item-toolbox">
+          <a
+            class="CIRCLE"
+            href="/search/"
+            rel="noopener noreferrer"
+            target="_self"
+            >
+            搜索
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+</div>
+
+
+  <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#加快git传输速度"><span class="toc-text">加快git传输速度</span></a></li></ol>
+  </div>
+
+
+
+<div class="content content-post CENTER">
+   <article id="post-加快git传输速度" class="article article-type-post" itemprop="blogPost">
+  <header class="article-header">
+    <h1 class="post-title">加快git传输速度</h1>
+
+    <div class="article-meta">
+      <span>
+        <i class="icon-calendar"></i>
+        <span>2016.11.10</span>
+      </span>
+
+      
+        <span class="article-author">
+          <i class="icon-user"></i>
+          <span>Leon Ma</span>
+        </span>
+      
+
+      
+  <span class="article-category">
+    <i class="icon-list"></i>
+    <a class="article-category-link" href="/categories/git/">git</a>
+  </span>
+
+
+
+      
+
+    </div>
+  </header>
+
+  <div class="article-content">
+    
+      <h1 id="加快git传输速度"><a href="#加快git传输速度" class="headerlink" title="加快git传输速度"></a>加快git传输速度</h1><p><img src="http://www.thebeijinger.com/files/u93526/greatfirewall1_616.jpg" alt=""></p>
+<p>​    最近遇到了个比较棘手的事情。公司是外企，在公司github同步代码下载速度达到1.5-2.3M/S，但是每到家同步github的代码下载速度只有2-4kb/s，拉一套源码就几个小时的事情。</p>
+<p>​    实在无法忍受这龟速，就自己办理的一个8M网速的宽带，10号以后自动提速到12M，，可是拉代码速度依旧只有70-160kb/s。</p>
+<p>​    这下简直无法忍受，只好自己想办法。<br>方法很简单，就是用代理，用chrome+linux+goagent组合<br>折腾了半个小时，马上就能访问<a href="http://developer.android.com这个网站了，" target="_blank" rel="external">http://developer.android.com这个网站了，</a></p>
+<p>在此吐槽一下中国网警们，不知道你们屏蔽这个网站是何用意？？？？<br>但是很github访问依旧慢，慢，慢，拉代码依旧需要很久很久。<br>于是去设置下github 代理。SO：<br>正文来了：</p>
+<p>通过配置git的代理可以加速git上传和下载<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">git config --global https.proxy=socks5://127.0.0.1:1080</div><div class="line">git config --global http.proxy=socks5://127.0.0.1:1080</div></pre></td></tr></table></figure></p>
+<p>端口号要根据ss的端口做相应调整，有同样困扰的小伙伴不妨试一试！</p>
+
+    
+  </div>
+</article>
+
+</div>
+
+
+  <div class="text-center donation">
+    <div class="inner-donation">
+      <span class="btn-donation">打赏一下</span>
+      <div class="donation-body">
+        <div class="tip text-center">扫一扫，支持零壹博客</div>
+        <ul class="theme.donation.items.length">
+        
+          <li class="item">
+            <img src="/images/qr-wechat.jpg" alt="">
+          </li>
+        
+          <li class="item">
+            <img src="/images/qr-alipay.jpg" alt="">
+          </li>
+        
+        </ul>
+      </div>
+    </div>
+  </div>
+
+
+
+
+  <a id="backTop" class="back-top">
+    <i class="icon-angle-up"></i>
+  </a>
+
+
+
+
+  <div class="modal" id="modal">
+  <span id="cover" class="cover hide"></span>
+  <div id="modal-dialog" class="modal-dialog hide-dialog">
+    <div class="modal-header">
+      <span id="close" class="btn-close">关闭</span>
+    </div>
+    <hr>
+    <div class="modal-body">
+      <ul class="list-toolbox">
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/archives/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              博客
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/category/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              分类
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/tag/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              标签
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/link/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              友链
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/about/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              关于
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/atom.xml"
+              rel="noopener noreferrer"
+              target="_blank"
+              >
+              RSS
+            </a>
+          </li>
+        
+          <li class="item-toolbox">
+            <a
+              class="CIRCLE"
+              href="/search/"
+              rel="noopener noreferrer"
+              target="_self"
+              >
+              搜索
+            </a>
+          </li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+
+  
+      <div class="fexo-comments comments-post">
+    
+
+    
+  <section class="duoshuo-comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="http://www.leonma.cn/2016/11/10/加快git传输速度/index.html" data-title="加快git传输速度" data-url="http://www.leonma.cn/2016/11/10/加快git传输速度/index.html"></div>
+    <!-- 多说评论框 end -->
+  </section>
+
+
+
+
+  <script type="text/javascript">
+  var duoshuoQuery = {short_name:"zerone01"};
+  (function() {
+    var ds = document.createElement('script');
+    ds.type = 'text/javascript';ds.async = true;
+    ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+    ds.charset = 'UTF-8';
+    (document.getElementsByTagName('head')[0]
+     || document.getElementsByTagName('body')[0]).appendChild(ds);
+  })();
+  </script>
+
+
+  </div>
+
+  
+  <script type="text/javascript">
+  function loadScript(url, callback) {
+    var script = document.createElement('script')
+    script.type = 'text/javascript';
+
+    if (script.readyState) { //IE
+      script.onreadystatechange = function() {
+        if (script.readyState == 'loaded' ||
+          script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else { //Others
+      script.onload = function() {
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName('head')[0].appendChild(script);
+  }
+
+  window.onload = function() {
+    loadScript('/js/bundle.js?235683', function() {
+      // load success
+    });
+  }
+</script>
+
+</body>
+</html>
